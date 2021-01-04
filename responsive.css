@@ -1,0 +1,39 @@
+.posts {
+    display: grid;
+    grid-row-gap: 16px;
+}
+
+/* ukuran tablet */
+@media screen and (max-width: 768px){
+    nav ul{
+    width: 40%;
+    }
+}
+
+/* ukuran mobile  */
+@media screen and (max-width: 578px){
+    .menu-toggle{
+        display: flex;
+    }
+
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 70%;
+        height: 100vh;
+        justify-content: space-around;
+        flex-direction: column;
+        background-color: rgb(28, 117, 117);
+        align-items: center;
+        z-index: -1;
+        transform:translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    nav ul.slide{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
